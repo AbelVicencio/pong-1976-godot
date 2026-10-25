@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🕹️ PONG — LA MAQUINITA DE LA FARMACIA
-### *Un viaje en el tiempo a aquellas tardes de domingo gastando las monedas de la mesada.*
+### *Un viaje en el tiempo a aquellas tardes gastando las monedas del domingo.*
 
 <br/>
 
@@ -20,16 +20,27 @@
 
 ## 🪙 Recordando Viejos Tiempos
 
-> *"Había un ritual sagrado los domingos: juntar las pocas monedas que nos daban de domingo, salir con los amigos al barrio y plantarse frente a la maquinita que tenían puesta en la farmacia de la esquina. El sonido de los beeps rebotando en las paredes, el resplandor de la pantalla de tubo en la penumbra y la emoción de retar al que ganaba para que no se le acabara la ficha."*
+> *"Había un ritual sagrado los domingos: juntar las pocas monedas del domingo que nos daban los papás o los abuelos, salir con los amigos a la calle y plantarse frente a la maquinita que tenían puesta en la farmacia de la esquina. El sonido de los beeps rebotando en las paredes, el resplandor de la pantalla de tubo en la penumbra y la emoción de retar al que ganaba para que no se le acabara la ficha."*
 
-Este proyecto es un **homenaje de corazón a esa época dorada**. Desarrollado en **Godot 4**, recrea cada detalle sensorial del clásico **Pong de Atari**: el rebote matemático exacto, los beeps de 8 bits generados por onda cuadrada y el inolvidable vidrio curvo de los televisores catódicos con fósforo persistente.
+Este proyecto es un **homenaje de corazón a esa época dorada**. Desarrollado en **Godot 4**, recrea cada detalle sensorial de aquellas retas: el rebote matemático exacto, los beeps de 8 bits generados por onda cuadrada y el inolvidable vidrio curvo de los televisores catódicos con fósforo persistente.
+
+---
+
+## 🇲🇽 La Historia Real: Las Maquinitas Adaptadas en el México de los 70s
+
+Muchos de nosotros no jugamos en un mueble oficial importado de Estados Unidos, sino en una maravilla del **ingenio mexicano**:
+
+1. **La consola casera adentro**: A finales de los años 70, traer arcades originales de Atari a México era carísimo por los aranceles de importación. Lo que llegaba eran las consolas hogareñas tipo *Home Pong* (o consolas con el mítico chip *AY-3-8500*).
+2. **El gabinete artesanal**: En talleres de carpintería y electrónica locales fabricaban gabinetes de madera o triplay, adaptando adentro una pequeña televisión portátil de bulbos o transistores en blanco y negro.
+3. **El monedero adaptado**: Los técnicos desoldaban los potenciómetros de la consola para conectarlos a perillas gruesas en el panel exterior y le soldaban un **tragamonedas mecánico** (de aquellos viejos pesos o monedas de 20 centavos) con un relevador y temporizador que liberaba la señal por unos minutos por cada moneda.
+4. **La farmacia o tiendita del barrio**: No hacía falta ir a un salón de juegos lujoso; la maquinita estaba ahí mismo, en la farmacia de la colonia, la miscelánea, la paletería o la papelería, donde se armaba la fila de chamacos para ver quién le quitaba el trono al que estaba jugando.
 
 ---
 
 ## ✨ Características Especiales
 
 ### 🎛️ Control Analógico con Scroll del Ratón
-¿Recuerdas la perilla giratoria (*paddle knob*) del arcade original? La hemos recreado usando la **rueda del ratón (Mouse Scroll)**. Cada giro de la rueda desplaza tu paleta con suavidad y precisión quirúrgica.
+¿Recuerdas la perilla giratoria (*paddle knob*) del arcade? La hemos recreado usando la **rueda del ratón (Mouse Scroll)**. Cada giro de la rueda desplaza tu paleta con suavidad y precisión quirúrgica.
 
 ### 📺 Simulación Auténtica de Pantalla CRT
 - **Scanlines de 240p**: El barrido horizontal del cañón de electrones tal como lo veían nuestros ojos.
@@ -109,7 +120,7 @@ Godot.exe
 
 <div align="center">
 
-*Dedicado a todos los que dejamos nuestras monedas de domingo y parte de nuestra infancia frente a una maquinita.*  
+*Dedicado a todos los que dejamos las monedas del domingo y parte de nuestra infancia frente a una maquinita.*  
 **¡A jugar y a recordar! 🕹️**
 
 </div>
