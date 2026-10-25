@@ -1,0 +1,11 @@
+# Godot 4 .gitignore
+# Caché de importación y binarios generados automáticamente por el motor
+.godot/
+
+# Archivos de configuración de exportación local / plantillas
+export_presets.cfg
+
+# Archivos temporales del sistema y del editor
+*.tmp
+.DS_Store
+Thumbs.db

@@ -1,0 +1,197 @@
+[gd_scene load_steps=10 format=3 uid="uid://c8bypongmain01"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_main"]
+[ext_resource type="Script" path="res://court.gd" id="2_court"]
+[ext_resource type="Script" path="res://digit_display.gd" id="3_digit"]
+[ext_resource type="Script" path="res://paddle.gd" id="4_paddle"]
+[ext_resource type="Script" path="res://ball.gd" id="5_ball"]
+[ext_resource type="Script" path="res://audio_manager.gd" id="6_audio"]
+[ext_resource type="Shader" path="res://crt_material.gdshader" id="7_crt"]
+[ext_resource type="Texture2D" uid="uid://bg1q35tqwau0y" path="res://portada.jpg" id="8_portada"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_crt"]
+shader = ExtResource("7_crt")
+shader_parameter/warp_amount = 0.055
+shader_parameter/corner_radius = 0.045
+shader_parameter/scanline_count = 240.0
+shader_parameter/scanline_intensity = 0.28
+shader_parameter/grille_intensity = 0.1
+shader_parameter/glow_intensity = 0.68
+shader_parameter/glow_radius = 0.0032
+shader_parameter/chromatic_aberration = 0.0018
+shader_parameter/flicker_intensity = 0.015
+shader_parameter/vignette_power = 0.45
+shader_parameter/phosphor_tint = Color(0.92, 0.96, 1, 1)
+shader_parameter/brightness_boost = 1.12
+shader_parameter/crt_enabled = true
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_main")
+
+[node name="Court" type="Node2D" parent="."]
+script = ExtResource("2_court")
+
+[node name="PlayerScoreDisplay" type="Node2D" parent="."]
+position = Vector2(280, 90)
+script = ExtResource("3_digit")
+
+[node name="CPUScoreDisplay" type="Node2D" parent="."]
+position = Vector2(520, 90)
+script = ExtResource("3_digit")
+
+[node name="PlayerPaddle" type="Node2D" parent="."]
+position = Vector2(45, 300)
+script = ExtResource("4_paddle")
+
+[node name="CPUPaddle" type="Node2D" parent="."]
+position = Vector2(755, 300)
+script = ExtResource("4_paddle")
+is_player = false
+
+[node name="Ball" type="Node2D" parent="."]
+position = Vector2(400, 300)
+script = ExtResource("5_ball")
+
+[node name="AudioManager" type="Node" parent="."]
+script = ExtResource("6_audio")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 800.0
+offset_bottom = 600.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="MessageLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -110.0
+offset_right = 300.0
+offset_bottom = -70.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 28
+text = "PONG 1976"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SubLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -350.0
+offset_top = -65.0
+offset_right = 350.0
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 13
+text = "GIRA EL SCROLL DEL RATON O CLIC PARA SERVIR
+[1-4] FÓSFORO | [C] CRT ON/OFF | [G] GLOW | [ESC] PORTADA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ControlsLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -380.0
+offset_top = -22.0
+offset_right = 380.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
+theme_override_font_sizes/font_size = 11
+text = "SCROLL: MOVER PALETA | [1-4] FÓSFORO | [C] CRT | [G] GLOW | [ESC] PORTADA"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NotificationLabel" type="Label" parent="UI"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -250.0
+offset_top = 32.0
+offset_right = 250.0
+offset_bottom = 56.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 0.8, 1)
+theme_override_font_sizes/font_size = 12
+text = "MODO FÓSFORO: P4 B&W ORIGINAL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CRTLayer" type="CanvasLayer" parent="."]
+layer = 10
+
+[node name="CRT" type="ColorRect" parent="CRTLayer"]
+material = SubResource("ShaderMaterial_crt")
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CoverLayer" type="CanvasLayer" parent="."]
+layer = 20
+
+[node name="CoverScreen" type="Control" parent="CoverLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CoverTexture" type="TextureRect" parent="CoverLayer/CoverScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("8_portada")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="CoverPrompt" type="Label" parent="CoverLayer/CoverScreen"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -300.0
+offset_top = -46.0
+offset_right = 300.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 1, 1, 0.95)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.9)
+theme_override_constants/shadow_offset_x = 2
+theme_override_constants/shadow_offset_y = 2
+theme_override_font_sizes/font_size = 14
+text = "- HAZ CLIC, TOCA LA PANTALLA O PULSA UNA TECLA PARA JUGAR -"
+horizontal_alignment = 1
+vertical_alignment = 1
