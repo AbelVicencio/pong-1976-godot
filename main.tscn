@@ -99,7 +99,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 13
 text = "GIRA EL SCROLL DEL RATON O CLIC PARA SERVIR
-[1-4] FÓSFORO | [C] CRT ON/OFF | [G] GLOW | [ESC] PORTADA"
+[1-4] FÓSFORO | [C] CRT ON/OFF | [G] GLOW | [ESC/R] PORTADA"
 horizontal_alignment = 1
 vertical_alignment = 1
 
@@ -118,7 +118,7 @@ grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.65, 0.65, 0.65, 1)
 theme_override_font_sizes/font_size = 11
-text = "SCROLL: MOVER PALETA | [1-4] FÓSFORO | [C] CRT | [G] GLOW | [ESC] PORTADA"
+text = "SCROLL: MOVER PALETA | [1-4] FÓSFORO | [C] CRT | [G] GLOW | [ESC/R] PORTADA"
 horizontal_alignment = 1
 vertical_alignment = 1
 

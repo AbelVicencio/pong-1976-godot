@@ -111,9 +111,11 @@ func _start_prompt_pulse() -> void:
 ## 2. En la portada -> solo se sale con clic o tecla (se descarta el scroll del ratón).
 ## =============================================================================
 func _input(event: InputEvent) -> void:
-	# ESC en cualquier momento de la partida regresa a la portada y resetea el juego
+	# ESC, R o BACKSPACE en cualquier momento de la partida regresa a la portada y resetea el juego.
+	# (R y Backspace sirven como respaldo en navegador Web si el navegador captura ESC).
 	if current_state != State.COVER:
-		if event is InputEventKey and event.pressed and event.keycode == KEY_ESCAPE:
+		if event is InputEventKey and event.pressed and \
+		   (event.keycode == KEY_ESCAPE or event.keycode == KEY_R or event.keycode == KEY_BACKSPACE):
 			_return_to_cover()
 			var vp = get_viewport()
 			if vp:
@@ -242,10 +244,10 @@ func _reset_game() -> void:
 		message_label.text = "PONG"
 		message_label.visible = true
 	if sub_label:
-		sub_label.text = "GIRA EL SCROLL O HAZ CLIC PARA SERVIR\n[1-4] FÓSFORO | [C] CRT | [G] GLOW | [ESC] PORTADA"
+		sub_label.text = "GIRA EL SCROLL O HAZ CLIC PARA SERVIR\n[1-4] FÓSFORO | [C] CRT | [G] GLOW | [ESC/R] PORTADA"
 		sub_label.visible = true
 	if controls_label:
-		controls_label.text = "SCROLL: MOVER PALETA | [1-4] FÓSFORO | [C] CRT | [G] GLOW | [ESC] PORTADA"
+		controls_label.text = "SCROLL: MOVER PALETA | [1-4] FÓSFORO | [C] CRT | [G] GLOW | [ESC/R] PORTADA"
 
 
 ## =============================================================================
