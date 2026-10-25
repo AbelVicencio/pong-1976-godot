@@ -10,7 +10,8 @@
 <br/>
 
 [![Godot Engine](https://img.shields.io/badge/Godot%20Engine-v4.7+-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)](https://godotengine.org)
-[![Platform](https://img.shields.io/badge/Plataforma-Windows%20%7C%20Linux%20%7C%20macOS-blue?style=for-the-badge)](https://godotengine.org)
+[![Platform](https://img.shields.io/badge/Plataforma-Windows%20%7C%20Web%20(HTML5)%20%7C%20Linux%20%7C%20macOS-blue?style=for-the-badge)](https://godotengine.org)
+[![WebAssembly](https://img.shields.io/badge/WebAssembly-WebGL%202.0-blueviolet?style=for-the-badge)](https://webassembly.org)
 [![Retro Vibe](https://img.shields.io/badge/Vintage-Atari%20Arcade%20CRT-brightgreen?style=for-the-badge)](https://github.com)
 [![License](https://img.shields.io/badge/Licencia-MIT-orange?style=for-the-badge)](LICENSE)
 
@@ -74,7 +75,7 @@ Al iniciar el juego te recibe la **portada exterior limpia y nítida** que decor
 | **Durante el Juego** | **Mover tu Paleta** | **Gira la rueda del ratón (Mouse Scroll)** |
 | **Control Alternativo**| **Mover Paleta** | Teclas <kbd>W</kbd> / <kbd>S</kbd> o Flechas <kbd>↑</kbd> / <kbd>↓</kbd> |
 | **Saque / Pausa** | **Lanzar la bola** | Clic del ratón, giro de scroll o barra <kbd>Espacio</kbd> |
-| **Cualquier Momento** | **Volver a Portada / Reset** | Presiona la tecla <kbd>ESC</kbd> |
+| **Cualquier Momento** | **Volver a Portada / Reset** | Presiona la tecla <kbd>ESC</kbd>, <kbd>R</kbd> o <kbd>Backspace</kbd> |
 | **Personalización** | **Color de Fósforo** | Teclas numéricas <kbd>1</kbd>, <kbd>2</kbd>, <kbd>3</kbd>, <kbd>4</kbd> |
 | **Personalización** | **Filtro CRT On/Off** | Tecla <kbd>C</kbd> |
 | **Personalización** | **Intensidad de Glow** | Tecla <kbd>G</kbd> |
@@ -89,7 +90,52 @@ Al iniciar el juego te recibe la **portada exterior limpia y nítida** que decor
 
 ---
 
-## 🚀 Cómo Jugar
+## 🌐 Versión Web (Navegador con WebAssembly & WebGL)
+
+El juego está completamente preparado y optimizado para ejecutarse en navegadores web modernos sin requerir instalación previa.
+
+### 🛠️ Optimizaciones Web Específicas Incluidas
+1. **Audio Web API sin restricciones**: Como el juego requiere un clic o toque inicial en la portada para comenzar, el contexto de audio del navegador se desbloquea de manera limpia y natural. La latencia se configuró en `25 ms` para evitar chasquidos.
+2. **Control con Mouse Scroll encapsulado**: El archivo `index.html` cuenta con prevención de scroll (`e.preventDefault()`), garantizando que girar la rueda del ratón mueva la paleta sin desplazar la página web contenedora.
+3. **Teclas de Respaldo (<kbd>R</kbd> y <kbd>Backspace</kbd>)**: Como los navegadores suelen interceptar la tecla <kbd>ESC</kbd> para salir de pantalla completa, puedes usar <kbd>R</kbd> o <kbd>Backspace</kbd> para reiniciar y regresar a la portada.
+4. **Exportación Single-Thread**: No requiere cabeceras complejas de aislamiento (`COOP/COEP`), por lo que corre en **cualquier servidor HTTP/HTTPS estático** sin configuraciones especiales.
+
+### 🧪 Cómo Probar la Versión Web en Local
+Desde PowerShell en la carpeta del proyecto:
+```powershell
+python -m http.server 8080 --directory build/web
+```
+Luego abre tu navegador en:  
+👉 **`http://localhost:8080`**
+
+### 🚀 Cómo Subir la Versión Web a Tu Servidor
+
+#### Opción 1: En tu propio Hosting o Servidor Web (Apache / Nginx / cPanel / VPS)
+1. Los archivos compilados listos para producción se encuentran en la carpeta **`build/web/`**:
+   - `index.html`
+   - `index.js`
+   - `index.wasm`
+   - `index.pck`
+   - `index.audio.worklet.js`
+2. Sube el contenido de esa carpeta a la ruta pública de tu servidor (por ejemplo: `/public_html/pong/` o `/var/www/html/pong/`).
+3. Comparte el enlace con tus amigos: `https://tudominio.com/pong/`.
+
+#### Opción 2: Publicarlo Gratis con GitHub Pages
+1. Copia el contenido de `build/web/` dentro de una carpeta llamada `docs/` en la raíz del proyecto.
+2. En tu repositorio de GitHub, ve a **Settings ➔ Pages**.
+3. En **Source**, selecciona **Deploy from a branch** ➔ Branch: `main` ➔ Folder: `/docs`.
+4. Haz clic en **Save**. En un minuto estará publicado en:  
+   👉 `https://AbelVicencio.github.io/pong-1976-godot/`
+
+#### 🔄 Re-exportar a Web con un Solo Comando
+Si realizas modificaciones al código y deseas recompilar la versión web:
+```powershell
+Godot_console.exe --headless --export-release "Web" build/web/index.html
+```
+
+---
+
+## 💻 Cómo Jugar en Escritorio (Nativo)
 
 ### Opción A: Desde Godot Engine
 1. Descarga o clona este repositorio:
@@ -109,7 +155,7 @@ Godot.exe
 
 ## 🛠️ Tecnologías y Arquitectura
 
-- **Motor**: Godot Engine 4.7+ (Renderizador Compatibility / OpenGL 3.3).
+- **Motor**: Godot Engine 4.7+ (Renderizador Compatibility / OpenGL 3.3 y WebGL 2.0).
 - **Lenguaje**: GDScript 2.0 (Tipado estático).
 - **Shaders**: Godot Shading Language (GLSL CanvasItem).
 - **Audio**: Síntesis directa en memoria mediante `AudioStreamWAV`.
