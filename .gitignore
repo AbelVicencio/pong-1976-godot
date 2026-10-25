@@ -1,6 +1,7 @@
 # Godot 4 .gitignore
 # Caché de importación y binarios generados automáticamente por el motor
 .godot/
+build/
 
 # Archivos de configuración de exportación local / plantillas
 export_presets.cfg
