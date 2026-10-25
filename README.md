@@ -77,7 +77,8 @@ Al iniciar el juego te recibe la **portada exterior limpia y nítida** que decor
 | Situación | Acción | Control |
 |---|---|---|
 | **Portada Inicial** | **Entrar al juego** | **Haz clic**, toca la pantalla o pulsa cualquier tecla *(no scroll)* |
-| **Durante el Juego** | **Mover tu Paleta** | **Gira la rueda del ratón (Mouse Scroll)** |
+| **Durante el Juego (PC)** | **Mover tu Paleta** | **Gira la rueda del ratón (Mouse Scroll)** |
+| **Móviles / Tablets** | **Mover tu Paleta** | **Desliza el pulgar arriba / abajo en la pantalla** |
 | **Control Alternativo**| **Mover Paleta** | Teclas <kbd>W</kbd> / <kbd>S</kbd> o Flechas <kbd>↑</kbd> / <kbd>↓</kbd> |
 | **Saque / Pausa** | **Lanzar la bola** | Clic del ratón, giro de scroll o barra <kbd>Espacio</kbd> |
 | **Cualquier Momento** | **Volver a Portada / Reset** | Presiona la tecla <kbd>ESC</kbd>, <kbd>R</kbd> o <kbd>Backspace</kbd> |

@@ -1,10 +1,13 @@
 ## paddle.gd
 ## =============================================================================
-## Control de Paletas: Jugador (Mouse Scroll / Teclado) e Inteligencia Artificial
+## Control de Paletas: Jugador (Mouse Scroll / Pantalla Táctil / Teclado) e IA
 ##
 ## CONCEPTOS GODOT CLAVE:
-## - _input(event): Captura eventos de entrada de más alta prioridad (Mouse, Teclado).
-##   Ideal para entradas que no deben perderse como los ticks de la rueda del ratón.
+## - _input(event): Captura eventos de entrada de más alta prioridad (Mouse, Touch, Teclado).
+##   Ideal para entradas que no deben perderse como los ticks de la rueda del ratón
+##   o el arrastre táctil continuo (InputEventScreenDrag).
+## - InputEventScreenDrag: Reporta el deslizamiento del dedo sobre pantallas táctiles
+##   en celulares y tablets, permitiendo control por pulgar sin ratón.
 ## - lerp(): Interpolación lineal para suavizar el desplazamiento hacia la posición meta,
 ##   proporcionando respuesta inmediata y libre de vibraciones o saltos bruscos.
 ## - IA Cinemática: Seguimiento reactivo del eje Y de la bola con zona muerta y límite
@@ -56,12 +59,20 @@ func _input(event: InputEvent) -> void:
 	if not is_player:
 		return
 
-	# Control principal por rueda del ratón (Mouse Scroll)
+	# 1. Control principal en PC: rueda del ratón (Mouse Scroll)
 	if event is InputEventMouseButton and event.pressed:
 		if event.button_index == MOUSE_BUTTON_WHEEL_UP:
 			target_y = clamp(target_y - scroll_step, min_y, max_y)
 		elif event.button_index == MOUSE_BUTTON_WHEEL_DOWN:
 			target_y = clamp(target_y + scroll_step, min_y, max_y)
+
+	# 2. Control táctil en celulares y tablets (deslizar con el dedo)
+	elif event is InputEventScreenDrag:
+		target_y = clamp(event.position.y, min_y, max_y)
+
+	# 3. Toque táctil inicial (tap en la pantalla para posicionar la paleta)
+	elif event is InputEventScreenTouch and event.pressed:
+		target_y = clamp(event.position.y, min_y, max_y)
 
 
 ## _process se ejecuta en cada fotograma gráfico.
