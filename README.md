@@ -9,11 +9,16 @@
 
 <br/>
 
+[![Jugar Online](https://img.shields.io/badge/JUGAR%20ONLINE-EN%20EL%20NAVEGADOR-success?style=for-the-badge&logo=googlechrome&logoColor=white)](https://abelvicencio.github.io/pong-1976-godot/)
 [![Godot Engine](https://img.shields.io/badge/Godot%20Engine-v4.7+-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)](https://godotengine.org)
 [![Platform](https://img.shields.io/badge/Plataforma-Windows%20%7C%20Web%20(HTML5)%20%7C%20Linux%20%7C%20macOS-blue?style=for-the-badge)](https://godotengine.org)
 [![WebAssembly](https://img.shields.io/badge/WebAssembly-WebGL%202.0-blueviolet?style=for-the-badge)](https://webassembly.org)
 [![Retro Vibe](https://img.shields.io/badge/Vintage-Atari%20Arcade%20CRT-brightgreen?style=for-the-badge)](https://github.com)
 [![License](https://img.shields.io/badge/Licencia-MIT-orange?style=for-the-badge)](LICENSE)
+
+<br/>
+
+### 🕹️ 👉 [¡Haz clic aquí para JUGAR en tu navegador sin instalar nada!](https://abelvicencio.github.io/pong-1976-godot/) 👈
 
 </div>
 
