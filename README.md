@@ -1,17 +1,17 @@
 <div align="center">
 
-# 🕹️ PONG 1976 — LA MAQUINITA DE LA FARMACIA
+# 🕹️ PONG — LA MAQUINITA DE LA FARMACIA
 ### *Un viaje en el tiempo a aquellas tardes de domingo gastando las monedas de la mesada.*
 
 <br/>
 
-![PONG 1976 — Arcade Edition](portada.png)
+![PONG — Arcade Edition](portada.png)
 
 <br/>
 
 [![Godot Engine](https://img.shields.io/badge/Godot%20Engine-v4.7+-478CBF?style=for-the-badge&logo=godotengine&logoColor=white)](https://godotengine.org)
 [![Platform](https://img.shields.io/badge/Plataforma-Windows%20%7C%20Linux%20%7C%20macOS-blue?style=for-the-badge)](https://godotengine.org)
-[![Retro Vibe](https://img.shields.io/badge/Vintage-Atari%201976%20CRT-brightgreen?style=for-the-badge)](https://github.com)
+[![Retro Vibe](https://img.shields.io/badge/Vintage-Atari%20Arcade%20CRT-brightgreen?style=for-the-badge)](https://github.com)
 [![License](https://img.shields.io/badge/Licencia-MIT-orange?style=for-the-badge)](LICENSE)
 
 </div>
@@ -22,7 +22,7 @@
 
 > *"Había un ritual sagrado los domingos: juntar las pocas monedas que nos daban de domingo, salir con los amigos al barrio y plantarse frente a la maquinita que tenían puesta en la farmacia de la esquina. El sonido de los beeps rebotando en las paredes, el resplandor de la pantalla de tubo en la penumbra y la emoción de retar al que ganaba para que no se le acabara la ficha."*
 
-Este proyecto es un **homenaje de corazón a esa época dorada**. Desarrollado en **Godot 4**, recrea cada detalle sensorial del clásico **Atari Pong de 1976**: el rebote matemático exacto, los beeps de 8 bits generados por onda cuadrada y el inolvidable vidrio curvo de los televisores catódicos con fósforo persistente.
+Este proyecto es un **homenaje de corazón a esa época dorada**. Desarrollado en **Godot 4**, recrea cada detalle sensorial del clásico **Pong de Atari**: el rebote matemático exacto, los beeps de 8 bits generados por onda cuadrada y el inolvidable vidrio curvo de los televisores catódicos con fósforo persistente.
 
 ---
 
@@ -40,7 +40,7 @@ Este proyecto es un **homenaje de corazón a esa época dorada**. Desarrollado e
 
 ### 🎨 Selector de Fósforo en Tiempo Real
 Revive cómo se jugaba en distintos tipos de monitores clásicos pulsando una sola tecla:
-- <kbd>1</kbd> **P4 Blanco y Negro Original (1976)**: El tono plateado/azulado de los primeros televisores de sala.
+- <kbd>1</kbd> **P4 Blanco y Negro Clásico**: El tono plateado/azulado de los primeros televisores de sala.
 - <kbd>2</kbd> **P1 Fósforo Verde Arcade**: El icónico brillo verde esmeralda de las máquinas de arcade de salón.
 - <kbd>3</kbd> **P3 Fósforo Ámbar Vintage**: Tono cálido dorado setentero.
 - <kbd>4</kbd> **Fósforo Neón Cian**: Estilo monitor vector/láser.
@@ -72,7 +72,7 @@ Al iniciar el juego te recibe la **portada exterior limpia y nítida** que decor
 
 ## 🏆 Reglas del Juego
 
-- **Primero a 11 Puntos Gana**: Regla oficial del Pong de 1976.
+- **Primero a 11 Puntos Gana**: Regla oficial del Pong clásico de Atari.
 - **Física Angular**: Si golpeas la bola con el **centro de tu paleta**, sale disparada recta; si la cortas con los **extremos**, toma ángulos inclinados de hasta **55°** para descolocar a la máquina.
 - **Tensión Creciente**: Cada raquetazo exitoso acelera la bola un poco más.
 
@@ -83,7 +83,7 @@ Al iniciar el juego te recibe la **portada exterior limpia y nítida** que decor
 ### Opción A: Desde Godot Engine
 1. Descarga o clona este repositorio:
    ```bash
-   git clone https://github.com/TU_USUARIO/pong-1976-godot.git
+   git clone https://github.com/AbelVicencio/pong-1976-godot.git
    ```
 2. Abre **Godot Engine 4** e importa la carpeta del proyecto.
 3. Haz clic en **Ejecutar** (o pulsa <kbd>F5</kbd>).

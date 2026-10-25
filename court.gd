@@ -1,6 +1,6 @@
 ## court.gd
 ## =============================================================================
-## Renderizado Gráfico de la Cancha de Juego Pong 1976
+## Renderizado Gráfico de la Cancha de Juego Pong Clásico
 ##
 ## CONCEPTO GODOT:
 ## Un nodo Node2D ligero que dibuja los elementos estáticos de la cancha

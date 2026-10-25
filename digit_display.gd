@@ -1,6 +1,6 @@
 ## digit_display.gd
 ## =============================================================================
-## Marcador Digital Retro Estilo 7 Segmentos (Atari Pong 1976)
+## Marcador Digital Retro Estilo 7 Segmentos (Atari Pong Clásico)
 ##
 ## CONCEPTOS GODOT:
 ## - Propiedades con 'set(new_val)': Permite reaccionar a cambios de valor

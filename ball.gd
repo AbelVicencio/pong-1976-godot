@@ -112,7 +112,7 @@ func _physics_process(delta: float) -> void:
 
 
 ## =============================================================================
-## Detección y Resolución de Colisión con Paletas (Física Clásica Pong 1976)
+## Detección y Resolución de Colisión con Paletas (Física Clásica de Pong)
 ##
 ## En el Pong original, el ángulo de salida no es un simple espejo del ángulo de entrada.
 ## Depende directamente de en qué parte de la paleta impacta la bola:

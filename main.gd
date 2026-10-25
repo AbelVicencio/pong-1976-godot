@@ -1,6 +1,6 @@
 ## main.gd
 ## =============================================================================
-## Controlador Principal de Pong 1976 (Máquina de Estados y Flujo de Juego)
+## Controlador Principal de Pong Clásico (Máquina de Estados y Flujo de Juego)
 ##
 ## CONCEPTOS GODOT CLAVE:
 ## - Máquina de Estados Finitos (FSM): Estructura el ciclo de vida del juego
@@ -49,7 +49,7 @@ var prompt_tween: Tween = null
 
 ## Perfiles de Fósforo Vintage conmutables en tiempo real
 const PHOSPHOR_PRESETS = [
-	{"name": "P4 B&W Original (1976)", "tint": Color(0.92, 0.96, 1.0), "glow": 0.68},
+	{"name": "P4 B&W Clásico", "tint": Color(0.92, 0.96, 1.0), "glow": 0.68},
 	{"name": "P1 Fósforo Verde Arcade", "tint": Color(0.32, 1.0, 0.42), "glow": 0.95},
 	{"name": "P3 Fósforo Ámbar Vintage", "tint": Color(1.0, 0.74, 0.20), "glow": 0.85},
 	{"name": "Fósforo Cian Neón", "tint": Color(0.30, 0.95, 1.0), "glow": 0.80}
@@ -239,7 +239,7 @@ func _reset_game() -> void:
 	current_state = State.IDLE
 
 	if message_label:
-		message_label.text = "PONG 1976"
+		message_label.text = "PONG"
 		message_label.visible = true
 	if sub_label:
 		sub_label.text = "GIRA EL SCROLL O HAZ CLIC PARA SERVIR\n[1-4] FÓSFORO | [C] CRT | [G] GLOW | [ESC] PORTADA"

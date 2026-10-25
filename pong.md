@@ -1,6 +1,6 @@
-# 📚 Manual de Arquitectura y Aprendizaje de Godot 4: PONG 1976
+# 📚 Manual de Arquitectura y Aprendizaje de Godot 4: PONG
 > **Guía Técnica para Desarrolladores de Software que Aprenden Godot Engine.**  
-> Basado en la implementación de *Pong 1976 (Atari Clone) con Shader CRT y Audio Procedural*.
+> Basado en la implementación de *Pong Clásico (Atari Clone) con Shader CRT y Audio Procedural*.
 
 ---
 
@@ -245,7 +245,7 @@ Muestreamos 8 puntos adyacentes en forma de estrella (`uv ± offset`) para simul
 
 ## 10. Física de Rebote Clásica e Inteligencia Artificial
 
-### Cálculo del Ángulo de Retorno (Atari 1976)
+### Cálculo del Ángulo de Retorno (Atari Pong Clásico)
 A diferencia de un rebote elástico convencional donde $\theta_{\text{salida}} = \theta_{\text{entrada}}$, en Pong el ángulo depende de la posición relativa de impacto en la paleta:
 
 ```gdscript

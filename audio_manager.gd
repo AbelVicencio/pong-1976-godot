@@ -1,6 +1,6 @@
 ## audio_manager.gd
 ## =============================================================================
-## Gestor de Audio Procedural para Pong 1976 (Atari Clone)
+## Gestor de Audio Procedural para Pong (Atari Clone)
 ##
 ## CONCEPTO GODOT:
 ## En lugar de requerir archivos externos (.wav o .ogg), este script sintetiza
